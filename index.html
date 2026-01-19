@@ -1,6 +1,284 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Mei | Ph.D. Candidate in Physics</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #fff;
+            --section-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--light-text);
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Sections */
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        /* Content Blocks */
+        .entry {
+            margin-bottom: 25px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+
+        .entry-meta {
+            color: var(--light-text);
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        .entry-subtitle {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            color: var(--light-text);
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .entry-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
 <body>
-  <h1>Hello World! This is my GitHub Page.</h1>
+
+    <div class="container">
+        <header>
+            <h1>Anna Mei</h1>
+            <div class="subtitle">Ph.D. Candidate in Physics at Harvard University</div>
+            <div class="contact-info">
+                <a href="mailto:amei@g.harvard.edu">amei@g.harvard.edu</a> •
+                <span>(617) 838-0750</span>
+            </div>
+            <div class="contact-info">
+                17 Oxford Street, Cambridge, MA 02138
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                I am a Ph.D. candidate in Physics with a strong foundation in theoretical and computational physics and advanced mathematics. 
+                I possess hands-on experience in electronics, FPGA/Microcontroller, and robotics systems. My research interests include robotics, 
+                control, and mathematical physics, with a focus on applying convex optimization (e.g., semidefinite programming) to physics problems.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Harvard University</span>
+                    <span class="entry-meta">Sep 2023 – Present</span>
+                </div>
+                <span class="entry-subtitle">Ph.D. in Physics</span>
+                <div>Advisor: Xi Yin</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Boston University</span>
+                    <span class="entry-meta">Aug 2019 – May 2023</span>
+                </div>
+                <span class="entry-subtitle">B.A. in Physics and B.A. in Mathematics (Summa Cum Laude)</span>
+                <div>Advisor: A. Liam Fitzpatrick</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Selected Projects</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Tactile Data in Imitation Learning</span>
+                    <span class="entry-meta">Nov 2025 – Present</span>
+                </div>
+                <ul>
+                    <li>Research aiming to incorporate tactile data from human demonstrations to improve the retargeting process for robotic grippers in imitation learning.</li>
+                    <li>Designed a tactile sensing glove to capture contact data in human manipulation demonstrations.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Formalizing Physics Proofs through Lean</span>
+                    <span class="entry-meta">Nov 2025 – Present</span>
+                </div>
+                <ul>
+                    <li>Formulating Euclidean QFT axioms in Lean (Theorem Proving Language) with the assistance of LLMs.</li>
+                    <li>Constructing proofs of a generalized free field satisfying the O-S Axioms.</li>
+                    <li>Identified a major inconsistency in axiom definitions and reconstructed the proof after correction.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">FM Radio Emitter & Receiver</span>
+                    <span class="entry-meta">Oct 2025</span>
+                </div>
+                <ul>
+                    <li>Built an analog FM transmitter and receiver as a class project.</li>
+                    <li>Tuned oscillators, filters, and amplifiers to achieve clean audio transmission.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">3D Ising Model Bootstrap</span>
+                    <span class="entry-meta">Dec 2023</span>
+                </div>
+                <ul>
+                    <li>Applied semidefinite programming (SDPB) to the conformal bootstrap to explore the allowed "island" region of the 3D Ising model.</li>
+                    <li>Implemented robust numerical optimization pipelines to study bounds on conformal data.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="entry">
+                <p>
+                    A. L. Fitzpatrick and <strong>Z. Mei</strong>, "LSZ in Action: Extracting Form Factors from Correlators Nonperturbatively in 2d Theory," 
+                    <em>JHEP</em> 03, 154 (2024). doi:10.1007/JHEP03(2024)154
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-category">
+                <span class="skill-label">Programming:</span> Mathematica, Python, Lean, C/C++, ROS
+            </div>
+            <div class="skill-category">
+                <span class="skill-label">Hardware:</span> FPGA, Microcontroller, Analog/Digital Electronics
+            </div>
+            <div class="skill-category">
+                <span class="skill-label">Mathematics:</span> Topology, Differential Geometry, Algebra, PDEs, Group Theory
+            </div>
+            <div class="skill-category">
+                <span class="skill-label">Languages:</span> English (fluent), Mandarin (native), Cantonese (native)
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Awards</h2>
+            <ul>
+                <li><strong>Faculty Award for Excellence</strong>, Boston University Physics Department (2023)</li>
+                <li><strong>UROP Award</strong>, Boston University (Summer 2020)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Anna Mei. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
