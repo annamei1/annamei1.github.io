@@ -9,33 +9,57 @@
     <title>Anna Mei | Harvard University</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --bg: #f8f9fa;
-            --card-bg: #ffffff;
-            --text: #444;
-            --text-light: #666;
+            --bg:        #e8f2fb;
+            --bg-deep:   #d8eaf7;
+            --surface:   #ffffff;
+            --surface-2: #ffffff;
+            --ink:       #0f1c26;
+            --ink-soft:  #2d4558;
+            --ink-mute:  #607d8e;
+            --rule:      #b8d4ec;
+
+            --blue:      #2e6da4;
+            --blue-soft: #4a88c0;
+
+            --font-display: "Fraunces", "Times New Roman", serif;
+            --font-body:    "Crimson Pro", "Crimson Text", "Times New Roman", serif;
+            --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
         }
 
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.62;
+            font-feature-settings: "kern", "liga", "calt", "onum";
+            text-rendering: geometricPrecision;
+            background: var(--bg);
+            background-image:
+                radial-gradient(at 5% 0%, rgba(74,136,192,0.08) 0px, transparent 40%),
+                radial-gradient(at 100% 100%, rgba(46,109,164,0.06) 0px, transparent 50%);
+            color: var(--ink);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
 
         /* Layout Container */
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1040px;
+            margin: 48px auto;
             display: flex;
-            flex-wrap: wrap; /* Wraps on mobile */
+            flex-wrap: wrap;
             gap: 40px;
-            padding: 20px;
+            padding: 0 32px;
         }
 
         /* Left Sidebar (Profile) */
@@ -46,59 +70,56 @@
         }
 
         .profile-card {
-            background: var(--card-bg);
+            background: var(--surface);
+            border: 1px solid var(--rule);
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            position: sticky; /* Keeps it visible while scrolling on desktop */
+            position: sticky;
             top: 20px;
         }
 
-        /* Profile Picture Placeholder */
         .profile-photo {
             width: 150px;
             height: 150px;
-            background-color: #e2e8f0; /* Gray placeholder color */
+            background-color: var(--bg-deep);
             border-radius: 50%;
             margin: 0 auto 20px auto;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border: 3px solid white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 2px solid var(--rule);
         }
-        
-        /* Remove this 'span' block once you add a real image */
+
         .profile-photo span {
-            color: #94a3b8;
+            color: var(--ink-mute);
             font-size: 0.9em;
         }
 
-        /* To add your real image, use this HTML inside the .profile-photo div: 
-           <img src="your-photo.jpg" alt="Anna Mei" style="width: 100%; height: 100%; object-fit: cover;"> 
-        */
-
         .name {
-            font-size: 1.8em;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
+            font-family: var(--font-display);
+            font-variation-settings: "opsz" 60, "wght" 500, "SOFT" 30, "WONK" 1;
+            font-size: 1.9em;
+            letter-spacing: -0.015em;
+            color: var(--ink);
+            margin-bottom: 4px;
         }
 
         .title {
-            color: var(--accent);
-            font-weight: 500;
+            font-family: var(--font-body);
+            font-size: 0.95em;
+            color: var(--ink-mute);
             margin-bottom: 20px;
         }
 
         .contact-details {
-            font-size: 0.9em;
-            color: var(--text-light);
+            font-family: var(--font-mono);
+            font-size: 0.72em;
+            color: var(--ink-mute);
             text-align: left;
             margin-top: 20px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--rule);
             padding-top: 20px;
+            letter-spacing: 0.02em;
         }
 
         .contact-item {
@@ -106,13 +127,13 @@
         }
 
         .contact-item a {
-            color: var(--text);
+            color: var(--ink-soft);
             text-decoration: none;
             transition: color 0.2s;
         }
 
         .contact-item a:hover {
-            color: var(--accent);
+            color: var(--blue);
         }
 
         /* Right Content Area */
@@ -122,65 +143,101 @@
         }
 
         section {
-            background: var(--card-bg);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            padding: 32px 36px;
+            margin-bottom: 28px;
+            position: relative;
         }
 
         h2 {
-            color: var(--primary);
-            font-size: 1.5em;
+            font-family: var(--font-display);
+            font-variation-settings: "opsz" 60, "wght" 450, "SOFT" 50;
+            font-size: 1.55em;
+            letter-spacing: -0.012em;
+            color: var(--ink);
             margin-top: 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--rule);
         }
 
         h3 {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            color: var(--primary);
+            font-family: var(--font-display);
+            font-variation-settings: "opsz" 36, "wght" 450, "SOFT" 40;
+            font-size: 1.15em;
+            letter-spacing: -0.008em;
+            margin-bottom: 6px;
+            color: var(--ink);
         }
 
+        p {
+            color: var(--ink-soft);
+            margin: 0 0 14px;
+        }
+
+        p:last-child { margin-bottom: 0; }
+
         .project-date {
-            font-size: 0.85em;
-            color: #888;
+            font-family: var(--font-mono);
+            font-size: 0.7em;
+            color: var(--ink-mute);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.18em;
             margin-bottom: 10px;
             display: block;
         }
 
         .project-item {
-            margin-bottom: 30px;
-        }
-        
-        .project-item:last-child {
-            margin-bottom: 0;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--rule);
         }
 
-        /* Education specific styling for sidebar or main */
-        .edu-item {
-            margin-bottom: 15px;
+        .project-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
+
+        .edu-item {
+            margin-bottom: 16px;
+        }
+
         .edu-school {
+            font-family: var(--font-display);
+            font-variation-settings: "opsz" 24, "wght" 500;
             font-weight: bold;
             display: block;
-            color: var(--primary);
+            color: var(--ink);
         }
+
         .edu-degree {
             display: block;
             font-size: 0.95em;
+            color: var(--ink-soft);
         }
+
         .edu-year {
-            font-size: 0.85em;
-            color: #888;
+            font-family: var(--font-mono);
+            font-size: 0.72em;
+            color: var(--ink-mute);
+            letter-spacing: 0.06em;
+        }
+
+        a {
+            color: var(--blue-soft);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--blue);
         }
 
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                padding: 0 16px;
             }
             .profile-card {
                 position: static;
@@ -199,7 +256,7 @@
                 </div>
 
                 <div class="name">Anna Mei</div>
-                <div style="color: var(--text-light); font-size: 0.95em; margin-bottom: 5px;">梅正贤 Zhengxian Mei</div>
+                <div style="font-family: var(--font-mono); font-size: 0.72em; color: var(--ink-mute); letter-spacing: 0.06em; margin-bottom: 5px;">梅正贤 Zhengxian Mei</div>
                 <div class="title">Ph.D. Candidate at Harvard</div>
                 
                 <div class="contact-details">
@@ -214,7 +271,7 @@
                         <span class="edu-year">2019 – 2023</span>
                     </div>
 
-                    <div class="contact-item" style="margin-top: 25px;">
+                    <div class="contact-item" style="margin-top: 20px;">
                         📧 <a href="mailto:amei@g.harvard.edu">amei@g.harvard.edu</a>
                     </div>
                     <div class="contact-item">
@@ -236,8 +293,8 @@
                     I've been working on conformal field theory and string theory, and my recent work is on formalization of QFT through Lean.
                 </p>
                 <p>
-                    I'm also actively involved in robotics research, focusing on tactile sensing and imitation learning.
-                    I also have hands-on experience with electronics and FPGA systems.
+                    I'm also actively involved in robotics research. I'm generally interested in physics-informed learning and control.
+                    I also have hands-on experience with electronics and FPGA systems. Feel free to reach out if you want to chat about physics, robotics, or anything in between!
                 </p>
             </section>
 
@@ -257,7 +314,7 @@
                     <p>
                         We use automated theorem proving and formal verification tools, particularly the Lean proof assistant, to rigorously formalize foundational aspects of quantum field theory.
                         The current focus is on mechanically proving that a generalized free field satisfies the Osterwalder–Schrader axioms, with the broader goal of building a verified, computer-assisted framework for validating quantum field theories and their symmetries.
-                        [<a href="https://github.com/mrdouglasny/OSforGFF" style="color:var(--accent); text-decoration:none;">GitHub</a>]
+                        [<a href="https://github.com/mrdouglasny/OSforGFF" style="color:var(--blue-soft); text-decoration:none;">GitHub</a>]
                     </p>
                 </div>
 
@@ -275,14 +332,14 @@
                 <h2>Publications</h2>
                 <p>
                     M. R. Douglas, S. Hoback, <strong><u>A. Mei</u></strong>, and R. Nissim.<br>
-                    <a href="https://arxiv.org/abs/2603.15770" style="color:var(--accent); text-decoration:none;">
+                    <a href="https://arxiv.org/abs/2603.15770" style="color:var(--blue-soft); text-decoration:none;">
                         "Formalization of QFT"
                     </a><br>
                     <em>arXiv</em>:2603.15770 (2026).
                 </p>
                 <p>
                     A. L. Fitzpatrick and <strong><u>Z. Mei</u></strong>.<br>
-                    <a href="https://doi.org/10.1007/JHEP03(2024)154" style="color:var(--accent); text-decoration:none;">
+                    <a href="https://doi.org/10.1007/JHEP03(2024)154" style="color:var(--blue-soft); text-decoration:none;">
                         "LSZ in Action: Extracting Form Factors from Correlators Nonperturbatively in 2d Theory"
                     </a><br>
                     <em>JHEP</em> 03, 154 (2024).
