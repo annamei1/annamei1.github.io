@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -28,7 +28,7 @@
             --blue:      #2e6da4;
             --blue-soft: #4a88c0;
 
-            --font-display: "Fraunces", "Times New Roman", serif;
+            --font-display: "Crimson Pro", "Crimson Text", "Times New Roman", serif;
             --font-body:    "Crimson Pro", "Crimson Text", "Times New Roman", serif;
             --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
         }
@@ -97,9 +97,9 @@
 
         .name {
             font-family: var(--font-display);
-            font-variation-settings: "opsz" 60, "wght" 500, "SOFT" 30, "WONK" 1;
-            font-size: 1.9em;
-            letter-spacing: -0.015em;
+            font-weight: 600;
+            font-size: 2.1em;
+            letter-spacing: -0.01em;
             color: var(--ink);
             margin-bottom: 4px;
         }
@@ -152,9 +152,9 @@
 
         h2 {
             font-family: var(--font-display);
-            font-variation-settings: "opsz" 60, "wght" 450, "SOFT" 50;
-            font-size: 1.55em;
-            letter-spacing: -0.012em;
+            font-weight: 600;
+            font-size: 1.6em;
+            letter-spacing: -0.01em;
             color: var(--ink);
             margin-top: 0;
             padding-bottom: 12px;
@@ -163,9 +163,9 @@
 
         h3 {
             font-family: var(--font-display);
-            font-variation-settings: "opsz" 36, "wght" 450, "SOFT" 40;
-            font-size: 1.15em;
-            letter-spacing: -0.008em;
+            font-weight: 600;
+            font-size: 1.2em;
+            letter-spacing: -0.005em;
             margin-bottom: 6px;
             color: var(--ink);
         }
@@ -205,8 +205,8 @@
 
         .edu-school {
             font-family: var(--font-display);
-            font-variation-settings: "opsz" 24, "wght" 500;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 1.15em;
             display: block;
             color: var(--ink);
         }
@@ -219,7 +219,7 @@
 
         .edu-year {
             font-family: var(--font-mono);
-            font-size: 0.72em;
+            font-size: 0.85em;
             color: var(--ink-mute);
             letter-spacing: 0.06em;
         }
@@ -256,7 +256,7 @@
                 </div>
 
                 <div class="name">Anna Mei</div>
-                <div style="font-family: var(--font-mono); font-size: 0.72em; color: var(--ink-mute); letter-spacing: 0.06em; margin-bottom: 5px;">梅正贤 Zhengxian Mei</div>
+                <div class="title" style="margin-bottom: 5px;"><span style="font-family: '楷体', 'KaiTi', 'STKaiti', serif;">梅正贤</span>&ensp;Zhengxian Mei</div>
                 <div class="title">Ph.D. Candidate at Harvard</div>
                 
                 <div class="contact-details">
@@ -268,6 +268,7 @@
                     <div class="edu-item">
                         <span class="edu-school">Boston University</span>
                         <span class="edu-degree">B.A. Physics & Math</span>
+                        <span class="edu-degree"><em>Summa Cum Laude</em></span>
                         <span class="edu-year">2019 – 2023</span>
                     </div>
 
@@ -290,43 +291,16 @@
                 <h2>About Me</h2>
                 <p>
                     I am a Physics Ph.D. candidate at Harvard University specializing in high energy theory. My advisor is Xi Yin.
-                    I've been working on conformal field theory and string theory, and my recent work is on formalization of QFT through Lean.
+                    I've been working on conformal field theory and string theory. My recent work focuses on formalization of mathematical physics through Lean.
                 </p>
                 <p>
                     I'm also actively involved in robotics research. I'm generally interested in physics-informed learning and control.
-                    I also have hands-on experience with electronics and FPGA systems. Feel free to reach out if you want to chat about physics, robotics, or anything in between!
+                    I also have hands-on experience with electronics and FPGA systems. 
+                </p>
+                <p>
+                    Feel free to reach out if you want to chat about physics, robotics, or anything in between!
                 </p>
             </section>
-
-            <section id="research">
-                <h2>Current Research</h2>
-                
-                <div class="project-item">
-                    <h3>Tactile Data for Retargeting in Imitation Learning</h3>
-                    <p>
-                        This project integrates tactile sensing into the imitation learning retargeting process by matching contact force and contact shape between human fingertip sensors and a robotic gripper to verify successful object grasping. 
-                        The approach addresses retargeting failures in imitation learning by ensuring physically consistent contact during manipulation, improving robustness and task transfer.
-                    </p>
-                </div>
-
-                <div class="project-item">
-                    <h3>Formalization and QFT</h3>
-                    <p>
-                        We use automated theorem proving and formal verification tools, particularly the Lean proof assistant, to rigorously formalize foundational aspects of quantum field theory.
-                        The current focus is on mechanically proving that a generalized free field satisfies the Osterwalder–Schrader axioms, with the broader goal of building a verified, computer-assisted framework for validating quantum field theories and their symmetries.
-                        [<a href="https://github.com/mrdouglasny/OSforGFF" style="color:var(--blue-soft); text-decoration:none;">GitHub</a>]
-                    </p>
-                </div>
-
-                <div class="project-item">
-                    <h3>Anomalous Dimension For Multi-trace Operators in \(\mathcal{N}=4\) SYM</h3>
-                    <p>
-                        The project aims to compute tree-level anomalous dimensions of multi-trace operators in \(\mathcal{N}=4\) Super Yang–Mills theory using a Hamiltonian perturbation approach. 
-                        This approach is intended to simplify calculations, clarify multi-trace operator mixing, and provide a more transparent understanding of the large-N spectrum beyond current correlator-based limits.
-                    </p>
-                </div>
-            </section>
-
 
             <section id="publications">
                 <h2>Publications</h2>
@@ -344,6 +318,26 @@
                     </a><br>
                     <em>JHEP</em> 03, 154 (2024).
                 </p>
+            </section>
+
+            <section id="research">
+                <h2>Ongoing Research</h2>
+
+                <div class="project-item">
+                    <h3>Tactile Data for Retargeting in Imitation Learning</h3>
+                    <p>
+                        This project integrates tactile sensing into the imitation learning retargeting process by matching contact force and contact shape between human fingertip sensors and a robotic gripper to verify successful object grasping.
+                        The approach addresses retargeting failures in imitation learning by ensuring physically consistent contact during manipulation, improving robustness and task transfer.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Anomalous Dimension For Multi-trace Operators in \(\mathcal{N}=4\) SYM</h3>
+                    <p>
+                        The project aims to compute tree-level anomalous dimensions of multi-trace operators in \(\mathcal{N}=4\) Super Yang–Mills theory using a Hamiltonian perturbation approach.
+                        This approach is intended to simplify calculations, clarify multi-trace operator mixing, and provide a more transparent understanding of the large-N spectrum beyond current correlator-based limits.
+                    </p>
+                </div>
             </section>
 
         </main>
