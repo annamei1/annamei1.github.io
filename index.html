@@ -36,7 +36,7 @@
         "url": "https://annamei1.github.io/",
         "name": "Anna (Zhengxian) Mei | Harvard Physics",
         "dateCreated": "2026-01-19",
-        "dateModified": "2026-08-20",
+        "dateModified": "2026-08-29",
         "mainEntity": {
             "@type": "Person",
             "@id": "https://annamei1.github.io/#anna-mei",
@@ -353,12 +353,11 @@
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    I am a Physics Ph.D. candidate at Harvard University specializing in high energy theory. My advisor is Xi Yin.
-                    I've been working on conformal field theory and string theory. My recent work focuses on formalization of mathematical physics through Lean.
+                    I am a Physics Ph.D. candidate at Harvard University advised by Xi Yin.
+                    My research focuses on Lean formalization and autoformalization, the development of reusable formal libraries, and constructive and axiomatic approaches to quantum field theory.
                 </p>
                 <p>
                     I'm also actively involved in robotics research. I'm generally interested in physics-informed learning and control.
-                    I also have hands-on experience with electronics and FPGA systems. 
                 </p>
                 <p>
                     Feel free to reach out if you want to chat about physics, robotics, or anything in between!
@@ -382,6 +381,45 @@
                     </a><br>
                     <em>JHEP</em> 03, 154 (2024).
                 </p>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="project-item">
+                    <h3>FLMF</h3>
+                    <span class="project-date">math-commons · Apache-2.0 · Private repository</span>
+                    <p>
+                        An open-source formalization project building a machine-verified counterpart to the NIST Digital Library of Mathematical Functions in Lean 4.
+                        My contribution is the fidelity-verification regime: a two-tier gate in which every machine-generated statement is checked numerically against an independent computational library and back-translated for comparison with the source text before it is marked verified.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3><a href="https://github.com/mrdouglasny/OSforGFF" target="_blank" rel="noopener noreferrer">OSforGFF</a></h3>
+                    <span class="project-date">Apache-2.0 · Public repository</span>
+                    <p>
+                        The open Lean library accompanying the QFT formalization.
+                        Its source files credit me as one of four authors.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3>GibbsMeasure</h3>
+                    <span class="project-date">random-fields · Private repository</span>
+                    <p>
+                        A Lean formalization of Gibbs measures and the two-dimensional Ising phase transition.
+                        I am a maintainer with administrative rights, authored the project roadmap, and proved results including Peierls' argument, the GKS and FKG inequalities, the Lee–Yang theorem, and critical-temperature bounds.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3><a href="https://github.com/xiyin137/OSreconstruction" target="_blank" rel="noopener noreferrer">OSreconstruction</a></h3>
+                    <span class="project-date">Public repository</span>
+                    <p>
+                        A formalization of Osterwalder–Schrader reconstruction in Lean 4.
+                    </p>
+                </div>
             </section>
 
             <section id="research">
